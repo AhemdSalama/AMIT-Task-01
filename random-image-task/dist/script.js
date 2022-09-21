@@ -13,7 +13,7 @@ const images = [
 
 // images[7]
 
-// Make this number a random number within array items (length) 
-let randomNumber = 0;
-
+// Make this number a random number within array items (length)
+let randomNumber = Math.floor(Math.random() * (images.length-1));
+console.log(randomNumber)
 document.getElementById('image').src = images[randomNumber];
