@@ -1,31 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>CodePen - ClearInterval Stop Train</title>
-    <!-- ahmed  -->
 
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
-<h2>Timer app</h2>
-<p>Start timer, you can pause or reset timer:</p>
+  <!-- partial:index.partial.html -->
+  <h2>Timer app</h2>
+  <p>Start timer, you can pause or reset timer:</p>
 
-<style>
-  .red {
-    color: red;
-  }
-</style>
-<div id="myDiv"></div>
+  <style>
+    .red {
+      color: red;
+    }
+  </style>
+  <div id="myDiv"></div>
 
-<!-- This button should start the timer or resume it -->
-<button id="start">Start</button>
-<!-- This button should stop the timer -->
-<button id="stop">Stop</button>
-<!-- This button should reset the timer to start from 0 again -->
-<button id="reset">Reset</button>
-<!-- partial -->
-  <script  src="./script.js"></script>
+  <!-- This button should start the timer or resume it -->
+  <button id="start" onclick="startCounter()">Start</button>
+  <!-- This button should stop the timer -->
+  <button id="stop" onclick="stopCounter()">Stop</button>
+  <!-- This button should reset the timer to start from 0 again -->
+  <button id="reset" onclick="resetCounter()">Reset</button>
+  <!-- partial -->
+  <script src="./script.js"></script>
 
 </body>
+
 </html>
