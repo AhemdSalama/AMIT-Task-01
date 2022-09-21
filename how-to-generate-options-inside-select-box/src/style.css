@@ -1,0 +1,9 @@
+.lesson {
+  margin: 20px
+}
+
+hr {
+  border-bottom: 1px solid #CCC;
+  margin: 0 0 20px;
+  width: 500px
+}
