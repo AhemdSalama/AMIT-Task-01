@@ -5,10 +5,21 @@
  * - https://api.github.com/users/
  */
 
-let users = [
-  "OsamaElzero",
-  "dmalan",
-  "taylorotwell",
-  "themsaid",
-  "freekmurze"
-];
+let users = ["OsamaElzero", "dmalan", "taylorotwell", "themsaid", "freekmurze"];
+
+// Fetch api
+SW();
+async function SW() {
+  const response = await fetch("https://api.github.com/users");
+  data = await response.json();
+
+  let randomNumber = Math.floor(Math.random() * (data.length - 1));
+  document.getElementById("link").href ="https://github.com/" + data[randomNumber].login;
+  document.getElementById("link").innerText = data[randomNumber].login;
+
+}
+
+// let randomNumber = Math.floor(Math.random() * (users.length-1));
+// console.log(randomNumber)
+// document.getElementById('link').href = "https://github.com/"+ users[randomNumber];
+// document.getElementById('link').innerText =  users[randomNumber];
