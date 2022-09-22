@@ -60,8 +60,21 @@ const posts = [
   }
 ];
 
-let div = document.getElementById("myDiv");
-let original = document.querySelector(".col");
+/*let div = document.getElementById("myDiv");
+let original = document.querySelector(".col"); */
 
-console.log(posts[0].title);
+document.querySelector("h2").innerText=posts[0].title;
+document.querySelector("p").innerText=posts[0].content;
 
+for (let index = 1; index < posts.length; index++) {
+  myFunction(index) ;  
+}
+
+function myFunction(index) 
+  {
+    const node = document.querySelector(".col");
+    const clone = node.cloneNode(true);
+    clone.querySelector("h2").innerText=posts[index].title;
+    clone.querySelector("p").innerText=posts[index].content;
+    document.getElementById("myDiv").appendChild(clone);    
+  }
